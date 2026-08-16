@@ -379,11 +379,17 @@ const TokenGate = ({
         <LockKeyhole className="h-3.5 w-3.5" />
         CoflNet access required
       </div>
-      <h2 className="text-2xl font-semibold text-stone-50">Enter your CoflNet API token</h2>
+      <h2 className="text-2xl font-semibold text-stone-50">Welcome to Flipshards</h2>
       <p className="mt-2 text-sm leading-6 text-stone-400">
-        The calculator only uses live CoflNet data in production mode. Your token is kept in page memory only, cleared from the input after submit,
+        This calculator only uses live CoflNet data in production mode. Your token is kept in page memory only, cleared from the input after submit,
         and disappears when you refresh or close this page.
       </p>
+      <div className="mt-2 text-sm leading-6 text-stone-400">
+        <div>To get your token:</div>
+        <div>1- Download and sign in to <a className="text-cyan-300 underline decoration-cyan-400/60 underline-offset-2 transition hover:text-cyan-200" href="https://sky.coflnet.com/" rel="noreferrer" target="_blank">SkyCofl</a></div>
+        <div>2- Type in chat /cofl api</div>
+        <div>3- Copy that API key and paste it</div>
+      </div>
 
       <label className="mt-5 flex flex-col gap-2 text-xs font-medium uppercase tracking-wide text-stone-400">
         CoflNet API token
@@ -393,7 +399,7 @@ const TokenGate = ({
           disabled={disabled}
           name="coflnet-token"
           onChange={(event) => onTokenChange(event.target.value)}
-          placeholder="Paste your Bearer token"
+          placeholder="Paste your API key token here"
           spellCheck={false}
           type="password"
           value={token}
